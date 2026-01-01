@@ -1,0 +1,173 @@
+/**
+ * Markdown工具页面样式
+ */
+.markdown-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    .header-icon {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .header-title {
+      display: block;
+      font-size: 32px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .header-subtitle {
+      display: block;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .tab-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 6px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .tab-item {
+      flex: 1;
+      text-align: center;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      text {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      &.active {
+        background: #ffffff;
+        
+        text {
+          color: #667eea;
+        }
+      }
+
+      &:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .page-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .convert-section,
+  .mindmap-section {
+    .input-section {
+      margin-bottom: 30px;
+
+      .section-title {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 15px;
+      }
+
+      .input-textarea {
+        width: 100%;
+        min-height: 400px;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        border: none;
+        font-size: 16px;
+        line-height: 1.6;
+        box-sizing: border-box;
+        resize: vertical;
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+    }
+
+    .action-button {
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+
+        &:hover:not(:disabled) {
+          transform: translateY(-2px);
+          box-shadow: 0 12px 28px rgba(102, 126, 234, 0.5);
+        }
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      }
+
+      &.secondary {
+        background: #ffffff;
+        color: #667eea;
+        margin-top: 15px;
+
+        &:hover {
+          background: #f5f7ff;
+        }
+      }
+    }
+
+    .result-section {
+      margin-top: 30px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+
+      .result-title {
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        color: #27ae60;
+        margin-bottom: 15px;
+      }
+
+      .result-path {
+        display: block;
+        font-size: 14px;
+        color: #666;
+        padding: 12px;
+        background: #f5f5f5;
+        border-radius: 8px;
+        word-break: break-all;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+

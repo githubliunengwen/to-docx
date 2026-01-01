@@ -1,0 +1,14 @@
+.idea
+.venv
+.logs
+__pycache__
+repomix-output.txt
+.env
+tmp_audio
+*.egg-info
+.pytest_cache
+logs
+*.log
+venv
+build
+dist
